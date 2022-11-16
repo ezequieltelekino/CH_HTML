@@ -2,6 +2,31 @@
     margin:0;
     padding: 0;
 }  
+
+
+
+/* grids */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr ;    /* en tamaño chico, una columna */
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem;
+    justify-items: center ;  /* mueve en horizontal*/
+    align-items: center;   /* mueve en vertical */
+    width: 95%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 html{
     font-size: 100%;
     background-image: url("../img/chaco.webp");
@@ -51,7 +76,8 @@ header{
 }
 
 .navegador ul li a{
-    text-decoration: none;  
+    text-decoration: none; 
+    font-size: 70%; 
     color: #404040f0;  
 }
 
@@ -117,24 +143,39 @@ header{
     font-size: large;
     display: flex;
     justify-content: center;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgba(205, 205, 205, 0.842);
-    border-color: darkgreen;
-    border-style: groove;
-    margin-top:100px;
-    margin-left:100px;
-    padding:50px;
+    /* border-color: darkgreen; */
+   /* border-style: groove; */
+    margin-top:5px;
+    margin-left:10px;
+    margin-right:10px;
+    padding:10px;
+    padding-top:0px;
     text-align: center;
+    font-size: 80%;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin:1rem;
+    padding:1rem;
+    max-width: 100%;
 }
 
 .galeria-landing {
     display:flex;
     justify-content: center;
     padding: 0rem; 
-    width:100%;
-    margin-left:50px;
-    margin-right: 50px;
-    margin-top:50px;
+    width:90%;
+    margin-left:1rem;
+    margin-right: 1rem;
+    margin-top:1rem;
+}
+
+.galeria-landing img{
+    max-width: 100%;  /* evita el scroll vertical de la galería en el index*/
 }
 
 .galeria-favoritos {
@@ -145,7 +186,6 @@ header{
 }
 
 .galeria-favoritos ul{
-    display:flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
 
@@ -203,4 +243,92 @@ header{
     margin-left:100px;
     padding:50px;
     text-align: center;
+}
+
+
+
+/* grids por áreas*/
+#grilla{
+    display:grid;
+    border: solid 1px green;
+    grid-template-areas: 
+    "contenido contenido publicidad"
+    "contenido contenido publicidad"
+    "contenido contenido publicidad";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 30%;
+}
+
+
+.img {  /* las imágenes nunca se pasan del 100%*/
+    max-width: 100%;   
+}
+
+.grid div img{ /* las imágenes de la grilla van al 90%*/
+    max-width:90%;
+}
+
+
+
+@media screen and (min-width:768px){
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr ;  /* en tamaño grande, dos columnas */
+        grid-template-rows: 1fr ;
+        margin: 1rem;
+        justify-items: center ;  /* mueve en horizontal*/
+        align-items: center;   /* mueve en vertical */
+        width: 95%;
+
+    }
+}
+
+
+.navegador div {
+    border:solid 1px #00ff0020;    /* dejo una línea poco visible como guía */
+}
+
+@media screen and (min-width:768px){
+    .navegador{
+        display:grid;
+        grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
+        grid-template-rows: 1fr ;
+        margin: 1rem;
+        justify-items: center ;  /* mueve en horizontal*/
+        align-items: center;   /* mueve en vertical */
+        width: 95%;
+       /* background-color: red;*/ 
+
+    }
+    .navegador ul li a {
+        /* color:yellow;*/
+        font-size: 100%;   /* en tamaño grande, fuente al 100%*/
+    }
+
+
+    .landing {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        max-width: 80%;
+        background-color: rgba(205, 205, 205, 0.842);
+        border-color: darkgreen;
+        border-style: groove;
+        margin-top:10px;
+        margin-left:80px;
+        margin-right:80px;
+        padding:50px;
+        padding-top:0px;
+        text-align: center;
+    }
+    
+    .titulo{
+        display: flex;
+        justify-content: center;
+        margin:1rem;
+        padding:1rem;
+        max-width: 100%;
+    }
+
 }
