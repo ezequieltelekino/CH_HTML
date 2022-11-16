@@ -1,0 +1,206 @@
+*{/* para reiniciar márgenes en cualquier navegador*/
+    margin:0;
+    padding: 0;
+}  
+html{
+    font-size: 100%;
+    background-image: url("../img/chaco.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+/* google fonts 
+    font-family: 'Comfortaa', cursive;
+
+    font-family: 'Ubuntu', sans-serif;
+*/
+header{
+    background: #99ccada3;   
+    width:100%;
+    position:sticky;
+    align-items: center;
+    display: flex;
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+
+}
+
+.navegador{
+    padding: 0rem; 
+    width:100%;
+}
+
+.navegador ul{
+    display: flex;
+    justify-content: center;
+}
+
+.navegador ul li {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    border-right: 2px solid purple;
+}
+
+.navegador ul li:last-child {
+    border-right: none;
+}
+
+.sin-vinetas{  /* para las viñetas que no lleven viñeta */
+    list-style: none; 
+}
+
+.navegador ul li a{
+    text-decoration: none;  
+    color: #404040f0;  
+}
+
+.pie {
+    background: #80008080;
+    width: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    position:fixed;
+}
+
+.texto-pie {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color: #c0c0e0;
+    font-size:2 rem;
+}
+.texto-copete {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color: #c0c0e0;
+    font-size:2 rem;
+}
+
+.notas {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    align: center;
+    max-width: 80%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:50px;
+    margin-left:100px;
+    padding:50px;
+    padding-top: 10px;
+
+    text-align: center;
+}
+
+.notas p{
+    padding:0px;
+}
+
+.notas ul {
+    list-style: none; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:20px;
+}
+
+.notas ul li a{
+    text-decoration: none;  
+    color: #404040f0;  
+    padding-right: 1rem;
+
+}
+
+.landing {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:100px;
+    margin-left:100px;
+    padding:50px;
+    text-align: center;
+}
+
+.galeria-landing {
+    display:flex;
+    justify-content: center;
+    padding: 0rem; 
+    width:100%;
+    margin-left:50px;
+    margin-right: 50px;
+    margin-top:50px;
+}
+
+.galeria-favoritos {
+
+    width:100%;
+    margin:100px;
+   
+}
+
+.galeria-favoritos ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+
+
+    list-style: none; 
+}
+
+.texto-contacto {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:50px;
+    margin-left:100px;
+    padding:50px;
+    text-align: center;
+}
+
+.galeria-contactos {
+    display:flex;
+    flex-flow: wrap; /* para que no queden todos en fila*/
+    justify-content: center;
+    width:80%;
+    margin:50px;
+}
+
+.galeria-contactos img{
+    margin:10px;
+    size-adjust: auto;
+
+}
+.formulario-generador {
+    display:flex;
+    flex-flow: nowrap; /* para que no queden todos en fila*/
+    justify-content: center;
+    width:100%;
+    margin:50px;
+}
+
+.generador {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+
+    max-width: 80%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:10px;
+    margin-left:100px;
+    padding:50px;
+    text-align: center;
+}
