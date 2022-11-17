@@ -173,13 +173,7 @@ header{
     text-align: center;
 }
 
-.titulo{
-    display: flex;
-    justify-content: center;
-    margin:1rem;
-    padding:1rem;
-    max-width: 100%;
-}
+
 .pie {
     background: #80008080;
     width: 100%;
@@ -310,9 +304,7 @@ header{
 }
 
 .titulo{
-    display: flex;
-    justify-content: center;
-    margin:1rem;
+    font-size: large;
     padding:1rem;
     max-width: 100%;
 }
@@ -389,6 +381,8 @@ header{
 
         font-family: 'Ubuntu', sans-serif;
         font-size: medium;
+        align-items: center;
+        
         display: flex;
         max-width: 100%;
         background-color: rgba(205, 205, 205, 0.842);
