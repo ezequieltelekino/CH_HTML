@@ -115,7 +115,6 @@ header{
 /* Navegador: tamaño mediano */
 @media screen and (max-width:767px) and (min-width:530px){
     .navegador{
-
         padding: 0rem; 
         width:100%;
     }
@@ -126,9 +125,8 @@ header{
         padding-right: 1rem;
     }
 
-    .navegador ul li a{
+    .navegador ul li a {
         font-size: 80%; 
-        lo
     }
     
 }/* fin navegador mediano */
@@ -137,7 +135,8 @@ header{
 
 
 /* Navegador grande */ 
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
+
     .navegador{
         display:grid;
         grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
