@@ -63,6 +63,7 @@ header{
 .navegador ul li a{
     text-decoration: none; 
     color: #404040f0;  
+    transform: scale(1.1,1.1);
 }
 
 
@@ -496,3 +497,10 @@ header{
     }
 }
 
+#boton-header:hover {
+    color: #a0a0a0; 
+    font-style: italic;
+}
+#imagen-zoom:hover {
+    transform: scale(1.1);
+}
