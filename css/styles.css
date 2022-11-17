@@ -49,38 +49,137 @@ header{
 
 }
 
-.navegador{
-    padding: 0rem; 
-    width:100%;
-}
 
-.navegador ul{
-    display: flex;
-    justify-content: center;
-}
 
-.navegador ul li {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.3rem;
-    margin-left: 1rem;
-    padding-right: 1rem;
-    border-right: 2px solid purple;
-}
-
-.navegador ul li:last-child {
-    border-right: none;
+.navegador div {
+    border:solid 1px #00ff0020;    /* dejo una línea poco visible como guía */
 }
 
 .sin-vinetas{  /* para las viñetas que no lleven viñeta */
     list-style: none; 
 }
 
+/* Navegador todos los tamaños */
 .navegador ul li a{
     text-decoration: none; 
-    font-size: 70%; 
     color: #404040f0;  
 }
 
+
+.navegador ul{
+    display: flex;
+    justify-content: center;
+}
+
+
+.navegador ul li {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    border-right: 2px solid purple;
+}
+
+
+.navegador ul li:last-child {
+    border-right: none;
+}
+/* Fin de navegador todos los tamaños */
+
+
+/* Navegador: tamaño chico */
+@media screen and (max-width:529px){
+    .navegador{
+        padding: 0rem; 
+        width:100%;
+    }
+    .navegador ul{
+        display: grid;
+        justify-content: center;
+    }
+    
+    .navegador ul li {
+        margin-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-right: 0px solid purple;
+
+    }
+    .navegador ul li a{
+        font-size: 80%; 
+    
+    }
+    
+}/* fin navegador mediano */
+
+
+/* Navegador: tamaño mediano */
+@media screen and (max-width:767px) and (min-width:530px){
+    .navegador{
+
+        padding: 0rem; 
+        width:100%;
+    }
+
+    .navegador ul li {
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navegador ul li a{
+        font-size: 80%; 
+        lo
+    }
+    
+}/* fin navegador mediano */
+
+
+
+
+/* Navegador grande */ 
+@media screen and (min-width:768px){
+    .navegador{
+        display:grid;
+        grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
+        grid-template-rows: 1fr ;
+        margin: 1rem;
+        justify-items: center ;  /* mueve en horizontal*/
+        align-items: center;   /* mueve en vertical */
+        width: 100%;
+       /* background-color: red;*/ 
+
+    }
+    .navegador ul li a {
+        /* color:yellow;*/
+        font-size: 100%;   /* en tamaño grande, fuente al 100%*/
+    }
+} /* fin navegador grande */
+
+
+.landing {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:10px;
+    margin-left:80px;
+    margin-right:80px;
+    padding:50px;
+    padding-top:0px;
+    text-align: center;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin:1rem;
+    padding:1rem;
+    max-width: 100%;
+}
 .pie {
     background: #80008080;
     width: 100%;
@@ -101,20 +200,21 @@ header{
     color: #c0c0e0;
     font-size:2 rem;
 }
-
+/* Nottas default*/
 .notas {
     font-family: 'Ubuntu', sans-serif;
     font-size: large;
-    align: center;
-    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
     background-color: rgba(205, 205, 205, 0.842);
     border-color: darkgreen;
     border-style: groove;
-    margin-top:50px;
-    margin-left:100px;
+    margin-top:10px;
+    margin-left:80px;
+    margin-right:80px;
     padding:50px;
-    padding-top: 10px;
-
+    padding-top:0px;
     text-align: center;
 }
 
@@ -137,6 +237,59 @@ header{
     padding-right: 1rem;
 
 }
+
+
+/* Fin notas default y chico*/
+/* Notas mediano */ 
+@media screen and (mAX-width:767px){
+    .notas {
+        font-size: large;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        margin-top:10px;
+        margin-left:5px;
+        margin-right:5px;
+        padding:5px;
+        padding-top:0px;
+    }
+
+    .notas ul {
+        justify-content:space-between;
+        margin:20px;
+    }
+
+    .notas ul li a{
+        padding-right: 1rem;
+    }
+    .notas div h1{
+        font-size:medium;
+    }
+}
+/* Fin notas mediano */
+
+/* Notas grande */ 
+@media screen and (min-width:768px){
+    .notas {
+        font-size: large;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        margin-top:20px;
+        margin-left:80px;
+        margin-right:80px;
+        padding:50px;
+        padding-top:0px;
+    }
+
+    .notas ul {
+        justify-content:space-between;
+        margin:20px;
+    }
+
+    .notas ul li a{
+        padding-right: 1rem;
+    }
+}
+/* Fin notas grande */
 
 .landing {
     font-family: 'Ubuntu', sans-serif;
@@ -168,9 +321,9 @@ header{
     display:flex;
     justify-content: center;
     padding: 0rem; 
-    width:90%;
-    margin-left:1rem;
-    margin-right: 1rem;
+    width:100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
     margin-top:1rem;
 }
 
@@ -188,39 +341,83 @@ header{
 .galeria-favoritos ul{
     flex-wrap: wrap;
     justify-content:space-evenly;
-
-
     list-style: none; 
 }
 
-.texto-contacto {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-    max-width: 80%;
-    background-color: rgba(205, 205, 205, 0.842);
-    border-color: darkgreen;
-    border-style: groove;
-    margin-top:50px;
-    margin-left:100px;
-    padding:50px;
-    text-align: center;
+
+
+/* Contactos chico*/
+@media screen and (max-width:767px){
+    .contacto{
+
+        font-family: 'Ubuntu', sans-serif;
+        font-size: medium;
+        display: flex;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        border-color: darkgreen;
+        border-style: groove;
+        margin:5px;
+        padding:5px;
+        text-align: center;
+        }
+
+
+        .galeria-contactos {
+            display:flex;
+            flex-flow: wrap; /* para que no queden todos en fila*/
+            justify-content: center;
+            width:100%;
+
+        }
+    
+        .galeria-contactos img{
+            max-width: 100%;
+            padding: 10px;
+    
+        }        
+ }
+    
+    
+
+
+
+/* Contacto grande*/
+ @media screen and (min-width:768px){
+
+    .contacto{
+
+        font-family: 'Ubuntu', sans-serif;
+        font-size: medium;
+        display: flex;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        border-color: darkgreen;
+        border-style: groove;
+        margin:5px;
+        padding:5px;
+        text-align: center;
+    }
+
+
+    .galeria-contactos {
+        display:flex;
+        flex-flow: wrap; /* para que no queden todos en fila*/
+        justify-content: center;
+        width:80%;
+        margin:50px;
+    }
+
+    .galeria-contactos img{
+        margin:10px;
+        size-adjust: auto;
+
+    }
 }
 
-.galeria-contactos {
-    display:flex;
-    flex-flow: wrap; /* para que no queden todos en fila*/
-    justify-content: center;
-    width:80%;
-    margin:50px;
-}
 
-.galeria-contactos img{
-    margin:10px;
-    size-adjust: auto;
 
-}
+
 .formulario-generador {
     display:flex;
     flex-flow: nowrap; /* para que no queden todos en fila*/
@@ -228,24 +425,47 @@ header{
     width:100%;
     margin:50px;
 }
-
-.generador {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-
-    max-width: 80%;
-    background-color: rgba(205, 205, 205, 0.842);
-    border-color: darkgreen;
-    border-style: groove;
-    margin-top:10px;
-    margin-left:100px;
-    padding:50px;
-    text-align: center;
+/* Generador mediano y chico */
+@media screen and (max-width:767px){
+        
+    .generador {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        border-color: darkgreen;
+        border-style: groove;
+        margin-top:10px;
+        margin-left:5px;
+        margin-right:5px;
+        padding:5px;
+        padding-top:5px;
+        text-align: center;
+    }
 }
 
-
+/* Generador grande */
+@media screen and (min-width:768px){
+        
+    .generador {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-color: rgba(205, 205, 205, 0.842);
+        border-color: darkgreen;
+        border-style: groove;
+        margin-top:10px;
+        margin-left:80px;
+        margin-right:80px;
+        padding:50px;
+        padding-top:50px;
+        text-align: center;
+    }
+}
 
 /* grids por áreas*/
 #grilla{
@@ -283,52 +503,3 @@ header{
     }
 }
 
-
-.navegador div {
-    border:solid 1px #00ff0020;    /* dejo una línea poco visible como guía */
-}
-
-@media screen and (min-width:768px){
-    .navegador{
-        display:grid;
-        grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
-        grid-template-rows: 1fr ;
-        margin: 1rem;
-        justify-items: center ;  /* mueve en horizontal*/
-        align-items: center;   /* mueve en vertical */
-        width: 95%;
-       /* background-color: red;*/ 
-
-    }
-    .navegador ul li a {
-        /* color:yellow;*/
-        font-size: 100%;   /* en tamaño grande, fuente al 100%*/
-    }
-
-
-    .landing {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: large;
-        display: flex;
-        justify-content: center;
-        max-width: 80%;
-        background-color: rgba(205, 205, 205, 0.842);
-        border-color: darkgreen;
-        border-style: groove;
-        margin-top:10px;
-        margin-left:80px;
-        margin-right:80px;
-        padding:50px;
-        padding-top:0px;
-        text-align: center;
-    }
-    
-    .titulo{
-        display: flex;
-        justify-content: center;
-        margin:1rem;
-        padding:1rem;
-        max-width: 100%;
-    }
-
-}
