@@ -1,0 +1,84 @@
+
+/* Notas default*/
+.notas {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: $color_fondo_cajas;
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top:10px;
+    margin-left:80px;
+    margin-right:80px;
+    padding:50px;
+    padding-top:0px;
+    text-align: center;
+    p{
+        padding:0px;
+    }
+    ul {
+        list-style: none; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-between;
+        margin:20px;
+        li a{
+            text-decoration: none;  
+            color: #404040f0;  
+            padding-right: 1rem;
+        
+        }
+    }
+}
+
+/* Fin notas default y chico*/
+/* Notas mediano */ 
+@media screen and (mAX-width:767px){
+    .notas {
+        font-size: large;
+        max-width: 100%;
+        background-color: $color_fondo_cajas;
+        margin-top:10px;
+        margin-left:5px;
+        margin-right:5px;
+        padding:5px;
+        padding-top:0px;
+        ul {
+            justify-content:space-between;
+            margin:20px;
+            li a{
+                padding-right: 1rem;
+            }
+        }
+        div h1{
+            font-size:medium;
+        }    
+    }
+}
+/* Fin notas mediano */
+
+/* Notas grande */ 
+@media screen and (min-width:768px){
+    .notas {
+        font-size: large;
+        max-width: 100%;
+        background-color: $color_fondo_cajas;
+        margin-top:20px;
+        margin-left:80px;
+        margin-right:80px;
+        padding:50px;
+        padding-top:0px;
+        ul {
+            justify-content:space-between;
+            margin:20px;
+            li a{
+                padding-right: 1rem;
+            }
+        }
+    }
+
+}
+/* Fin notas grande */

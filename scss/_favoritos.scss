@@ -1,0 +1,10 @@
+
+.galeria-favoritos {
+    width:100%;
+    margin:100px;
+    ul{
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        list-style: none; 
+    }  
+}

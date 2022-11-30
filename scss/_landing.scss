@@ -1,0 +1,32 @@
+
+.landing {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: $color_fondo_cajas;
+    border-color: darkgreen;
+    border-style: groove; 
+    margin-top:5px;
+    margin-left:10px;
+    margin-right:10px;
+    padding:10px;
+    padding-top:0px;
+    text-align: center;
+    font-size: 80%;
+}
+
+
+.galeria-landing {
+    display:flex;
+    justify-content: center;
+    padding: 0rem; 
+    width:100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top:1rem;
+    img{
+        max-width: 100%;  /* evita el scroll vertical de la galería en el index*/
+    }
+}

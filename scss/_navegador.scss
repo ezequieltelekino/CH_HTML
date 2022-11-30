@@ -1,0 +1,87 @@
+.navegador {
+    div {
+        border:solid 1px #00ff0020;    /* dejo una línea poco visible como guía */
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        li {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1rem;
+            margin-left: 1rem;
+            padding-right: 1rem;
+            border-right: 2px solid purple;
+            a{
+                text-decoration: none; 
+                color: #404040f0;  
+                transform: scale(1.1,1.1);
+            }
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+/* Fin de navegador todos los tamaños */
+
+
+/* Navegador: tamaño chico */
+@media screen and (max-width:529px){
+    .navegador{
+        padding: 0rem; 
+        width:100%;
+        ul{
+            display: grid;
+            justify-content: center;
+            li {
+                margin-left: 0.5rem;
+                padding-right: 0.5rem;
+                border-right: 0px solid purple;
+                a{
+                    font-size: 80%; 
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+/* Navegador: tamaño mediano */
+@media screen and (max-width:767px) and (min-width:530px){
+    .navegador{
+        padding: 0rem; 
+        width:100%;
+        ul li {
+            font-family: 'Ubuntu', sans-serif;
+            margin-left: 1rem;
+            padding-right: 1rem;
+            a {
+                font-size: 80%; 
+            }
+        }
+    }
+
+
+    
+}/* fin navegador mediano */
+
+
+/* Navegador grande */ 
+@media screen and (min-width: 768px) {
+
+    .navegador{
+        display:grid;
+        grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
+        grid-template-rows: 1fr ;
+        margin: 1rem;
+        justify-items: center ;  /* mueve en horizontal*/
+        align-items: center;   /* mueve en vertical */
+        width: 100%;
+        ul li a {
+            font-size: 100%;   /* en tamaño grande, fuente al 100%*/
+        }
+    }
+} /* fin navegador grande */

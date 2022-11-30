@@ -1,0 +1,47 @@
+
+.formulario-generador {
+    display:flex;
+    flex-flow: nowrap; /* para que no queden todos en fila*/
+    justify-content: center;
+    width:100%;
+    margin:50px;
+}
+/* Generador mediano y chico */
+@media screen and (max-width:767px){       
+    .generador {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-color: $color_fondo_cajas;
+        border-color: darkgreen;
+        border-style: groove;
+        margin-top:10px;
+        margin-left:5px;
+        margin-right:5px;
+        padding:5px;
+        padding-top:5px;
+        text-align: center;
+    }
+}
+
+/* Generador grande */
+@media screen and (min-width:768px){
+    .generador {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-color: $color_fondo_cajas;
+        border-color: darkgreen;
+        border-style: groove;
+        margin-top:10px;
+        margin-left:80px;
+        margin-right:80px;
+        padding:50px;
+        padding-top:50px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,27 @@
+
+/* grids */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr ;    /* en tamaño chico, una columna */
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem;
+    justify-items: center ;  /* mueve en horizontal*/
+    align-items: center;   /* mueve en vertical */
+    width: 95%;
+}
+
+.grid div img{ /* las imágenes de la grilla van al 90%*/
+    max-width:90%;
+}
+
+@media screen and (min-width:768px){
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr ;  /* en tamaño grande, dos columnas */
+        grid-template-rows: 1fr ;
+        margin: 1rem;
+        justify-items: center ;  /* mueve en horizontal*/
+        align-items: center;   /* mueve en vertical */
+        width: 95%;
+    }
+}

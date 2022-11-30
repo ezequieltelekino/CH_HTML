@@ -3,3 +3,69 @@ $pantalla_mediana: 768px;
 $fondo_header: #99ccada3;
 $header_hover:  #a0a0a0; 
 $color_fondo_cajas: rgba(205, 205, 205, 0.842);
+
+*{/* para reiniciar márgenes en cualquier navegador*/
+    margin:0;
+    padding: 0;
+}  
+
+.titulo{
+    font-size: large;
+    padding:1rem;
+    max-width: 100%;
+}
+
+header{
+    background: $fondo_header;   
+    width:100%;
+    position:sticky;
+    align-items: center;
+    display: flex;
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+}
+
+.pie {
+    background: #80008080;
+    width: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    position:fixed;
+}
+
+.texto-pie {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color: #c0c0e0;
+    font-size:2 rem;
+}
+.texto-copete {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color: #c0c0e0;
+    font-size:2 rem;
+}
+
+html{
+    font-size: 100%;
+    background-image: url("../img/chaco.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.sin-vinetas{  /* para las viñetas que no lleven viñeta */
+    list-style: none; 
+}
+
+.img {  /* las imágenes nunca se pasan del 100%*/
+    max-width: 100%;   
+}
+
+#boton-header:hover {
+    color: $header_hover;
+    font-style: italic;
+}
+
+#imagen-zoom:hover {
+    transform: scale(1.1);
+}
