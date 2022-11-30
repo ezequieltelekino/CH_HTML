@@ -374,17 +374,20 @@ html {
   font-size: 100%;
 }
 
-.galeria-landing {
+.redimensiona-carousel {
   display: flex;
   justify-content: center;
   padding: 0rem;
-  width: 100%;
   margin-left: 0rem;
   margin-right: 0rem;
   margin-top: 1rem;
+  max-width: 100%;
 }
-.galeria-landing img {
-  max-width: 100%; /* evita el scroll vertical de la galería en el index*/
+
+.carousel {
+  width: 640px;
+  height: 360px;
+  max-width: 80%;
 }
 
 .galeria-favoritos {
