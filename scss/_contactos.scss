@@ -23,7 +23,7 @@
             img{
                 max-width: 100%;
                 padding: 10px;
-        
+                max-width: 15%;
             }        
         }
  }
@@ -64,8 +64,7 @@
         margin:50px;
         img{
             margin:10px;
-            size-adjust: auto;
-    
+            max-width: 10%;
         }
     }
 }

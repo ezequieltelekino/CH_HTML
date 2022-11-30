@@ -280,6 +280,7 @@ html {
   .galeria-contactos img {
     max-width: 100%;
     padding: 10px;
+    max-width: 15%;
   }
 }
 /* Contacto grande*/
@@ -314,7 +315,7 @@ html {
   }
   .galeria-contactos img {
     margin: 10px;
-    size-adjust: auto;
+    max-width: 10%;
   }
 }
 .formulario-generador {
