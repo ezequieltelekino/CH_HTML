@@ -4,6 +4,8 @@ $fondo_header: #99ccada3;
 $header_hover:  #a0a0a0; 
 $color_fondo_cajas: rgba(205, 205, 205, 0.842);
 
+
+
 *{/* para reiniciar márgenes en cualquier navegador*/
     margin:0;
     padding: 0;
@@ -68,4 +70,14 @@ html{
 
 #imagen-zoom:hover {
     transform: scale(1.1);
+}
+
+.caja_gris{ 
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    background-color: $color_fondo_cajas;
+    border-style: groove; 
+    border-color: darkgreen;
+    text-align: center;
+    justify-content: center;
 }

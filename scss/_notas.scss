@@ -1,23 +1,27 @@
 
 /* Notas default*/
 .notas {
-    font-family: 'Ubuntu', sans-serif;
     font-size: large;
-    display: flex;
-    justify-content: center;
     max-width: 100%;
-    background-color: $color_fondo_cajas;
-    border-color: darkgreen;
-    border-style: groove;
     margin-top:10px;
     margin-left:80px;
     margin-right:80px;
     padding:50px;
     padding-top:0px;
+    /* el siguiente código me gustaría meterlo en un extend, 
+    pero no medeja hacerlo en una MQ*/
+
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    background-color: $color_fondo_cajas;
+    border-style: groove; 
+    border-color: darkgreen;
     text-align: center;
-    p{
-        padding:0px;
-    }
+    justify-content: center;
+
+    /* fin del código que quisiera meter en un extend .caja_gris*/  
+    p { padding:0px;  }
+
     ul {
         list-style: none; 
         display: flex;
@@ -36,11 +40,10 @@
 
 /* Fin notas default y chico*/
 /* Notas mediano */ 
-@media screen and (mAX-width:767px){
+@media screen and (max-width:767px){
     .notas {
         font-size: large;
         max-width: 100%;
-        background-color: $color_fondo_cajas;
         margin-top:10px;
         margin-left:5px;
         margin-right:5px;

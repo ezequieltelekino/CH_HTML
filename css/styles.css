@@ -66,6 +66,16 @@ html {
   transform: scale(1.1);
 }
 
+.caja_gris, .landing {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  background-color: rgba(205, 205, 205, 0.842);
+  border-style: groove;
+  border-color: darkgreen;
+  text-align: center;
+  justify-content: center;
+}
+
 /* grids */
 .grid {
   display: grid;
@@ -167,20 +177,23 @@ html {
 } /* fin navegador grande */
 /* Notas default*/
 .notas {
-  font-family: "Ubuntu", sans-serif;
   font-size: large;
-  display: flex;
-  justify-content: center;
   max-width: 100%;
-  background-color: rgba(205, 205, 205, 0.842);
-  border-color: darkgreen;
-  border-style: groove;
   margin-top: 10px;
   margin-left: 80px;
   margin-right: 80px;
   padding: 50px;
   padding-top: 0px;
+  /* el siguiente código me gustaría meterlo en un extend, 
+  pero no medeja hacerlo en una MQ*/
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  background-color: rgba(205, 205, 205, 0.842);
+  border-style: groove;
+  border-color: darkgreen;
   text-align: center;
+  justify-content: center;
+  /* fin del código que quisiera meter en un extend .caja_gris*/
 }
 .notas p {
   padding: 0px;
@@ -201,11 +214,10 @@ html {
 
 /* Fin notas default y chico*/
 /* Notas mediano */
-@media screen and (mAX-width: 767px) {
+@media screen and (max-width: 767px) {
   .notas {
     font-size: large;
     max-width: 100%;
-    background-color: rgba(205, 205, 205, 0.842);
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
@@ -273,10 +285,8 @@ html {
 /* Contacto grande*/
 @media screen and (min-width: 768px) {
   .contacto {
-    font-family: "Ubuntu", sans-serif;
     font-size: medium;
     align-items: center;
-    display: flex;
     max-width: 100%;
     background-color: rgba(205, 205, 205, 0.842);
     border-color: darkgreen;
@@ -284,6 +294,16 @@ html {
     margin: 5px;
     padding: 5px;
     text-align: center;
+    /* el siguiente código me gustaría meterlo en un extend, 
+      pero no medeja hacerlo en una MQ*/
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-style: groove;
+    border-color: darkgreen;
+    text-align: center;
+    justify-content: center;
+    /* fin del código que quisiera meter en un extend .caja_gris*/
   }
   .galeria-contactos {
     display: flex;
@@ -344,21 +364,14 @@ html {
   }
 }
 .landing {
-  font-family: "Ubuntu", sans-serif;
-  font-size: large;
-  display: flex;
-  justify-content: center;
   max-width: 100%;
-  background-color: rgba(205, 205, 205, 0.842);
-  border-color: darkgreen;
-  border-style: groove;
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
+  padding-bottom: 20px;
   padding-top: 0px;
-  text-align: center;
-  font-size: 80%;
+  font-size: 100%;
 }
 
 .galeria-landing {

@@ -32,10 +32,8 @@
 /* Contacto grande*/
  @media screen and (min-width:768px){
     .contacto{
-        font-family: 'Ubuntu', sans-serif;
         font-size: medium;
         align-items: center;      
-        display: flex;
         max-width: 100%;
         background-color: $color_fondo_cajas;
         border-color: darkgreen;
@@ -43,6 +41,19 @@
         margin:5px;
         padding:5px;
         text-align: center;
+
+/* el siguiente código me gustaría meterlo en un extend, 
+  pero no medeja hacerlo en una MQ*/
+
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        background-color: $color_fondo_cajas;
+        border-style: groove; 
+        border-color: darkgreen;
+        text-align: center;
+        justify-content: center;
+
+/* fin del código que quisiera meter en un extend .caja_gris*/        
     }
 
     .galeria-contactos {
