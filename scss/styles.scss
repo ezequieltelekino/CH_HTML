@@ -1,3 +1,5 @@
+@import "globales";
+
 *{/* para reiniciar márgenes en cualquier navegador*/
     margin:0;
     padding: 0;
@@ -25,13 +27,8 @@ html{
     height: 100%;
 }
 
-/* google fonts 
-    font-family: 'Comfortaa', cursive;
-
-    font-family: 'Ubuntu', sans-serif;
-*/
 header{
-    background: #99ccada3;   
+    background: $fondo_header;   
     width:100%;
     position:sticky;
     align-items: center;
@@ -62,9 +59,7 @@ header{
         li:last-child {
             border-right: none;
         }
-        
     }
-    
 }
 
 
@@ -143,7 +138,7 @@ header{
     display: flex;
     justify-content: center;
     max-width: 100%;
-    background-color: rgba(205, 205, 205, 0.842);
+    background-color: $color_fondo_cajas;
     border-color: darkgreen;
     border-style: groove;
     margin-top:10px;
@@ -182,7 +177,7 @@ header{
     display: flex;
     justify-content: center;
     max-width: 100%;
-    background-color: rgba(205, 205, 205, 0.842);
+    background-color: $color_fondo_cajas;
     border-color: darkgreen;
     border-style: groove;
     margin-top:10px;
@@ -216,7 +211,7 @@ header{
     .notas {
         font-size: large;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         margin-top:10px;
         margin-left:5px;
         margin-right:5px;
@@ -241,7 +236,7 @@ header{
     .notas {
         font-size: large;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         margin-top:20px;
         margin-left:80px;
         margin-right:80px;
@@ -265,7 +260,7 @@ header{
     display: flex;
     justify-content: center;
     max-width: 100%;
-    background-color: rgba(205, 205, 205, 0.842);
+    background-color: $color_fondo_cajas;
     /* border-color: darkgreen; */
    /* border-style: groove; */
     margin-top:5px;
@@ -314,7 +309,7 @@ header{
         font-size: medium;
         display: flex;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         border-color: darkgreen;
         border-style: groove;
         margin:5px;
@@ -344,7 +339,7 @@ header{
         align-items: center;      
         display: flex;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         border-color: darkgreen;
         border-style: groove;
         margin:5px;
@@ -381,7 +376,7 @@ header{
         display: flex;
         justify-content: center;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         border-color: darkgreen;
         border-style: groove;
         margin-top:10px;
@@ -401,7 +396,7 @@ header{
         display: flex;
         justify-content: center;
         max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
+        background-color: $color_fondo_cajas;
         border-color: darkgreen;
         border-style: groove;
         margin-top:10px;
@@ -416,7 +411,7 @@ header{
 /* grids por áreas*/
 #grilla{
     display:grid;
-    border: solid 1px green;
+    //border: solid 1px green;
     grid-template-areas: 
     "contenido contenido publicidad"
     "contenido contenido publicidad"
@@ -447,7 +442,7 @@ header{
 }
 
 #boton-header:hover {
-    color: #a0a0a0; 
+    color: $header_hover;
     font-style: italic;
 }
 #imagen-zoom:hover {

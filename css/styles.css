@@ -23,11 +23,6 @@ html {
   height: 100%;
 }
 
-/* google fonts 
-    font-family: 'Comfortaa', cursive;
-
-    font-family: 'Ubuntu', sans-serif;
-*/
 header {
   background: rgba(153, 204, 173, 0.6392156863);
   width: 100%;
@@ -382,7 +377,6 @@ header {
 /* grids por áreas*/
 #grilla {
   display: grid;
-  border: solid 1px green;
   grid-template-areas: "contenido contenido publicidad" "contenido contenido publicidad" "contenido contenido publicidad";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 30% 30%;
