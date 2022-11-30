@@ -1,38 +1,26 @@
-*{/* para reiniciar márgenes en cualquier navegador*/
-    margin:0;
-    padding: 0;
-}  
-
-
-
-/* grids */
-.grid{
-    display:grid;
-    grid-template-columns: 1fr ;    /* en tamaño chico, una columna */
-    grid-template-rows: 1fr 1fr;
-    margin: 1rem;
-    justify-items: center ;  /* mueve en horizontal*/
-    align-items: center;   /* mueve en vertical */
-    width: 95%;
+@charset "UTF-8";
+* { /* para reiniciar márgenes en cualquier navegador*/
+  margin: 0;
+  padding: 0;
 }
 
+/* grids */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* en tamaño chico, una columna */
+  grid-template-rows: 1fr 1fr;
+  margin: 1rem;
+  justify-items: center; /* mueve en horizontal*/
+  align-items: center; /* mueve en vertical */
+  width: 95%;
+}
 
-
-
-
-
-
-
-
-
-
-
-html{
-    font-size: 100%;
-    background-image: url("../img/chaco.webp");
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 100%;
+html {
+  font-size: 100%;
+  background-image: url("../img/chaco.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 /* google fonts 
@@ -40,164 +28,323 @@ html{
 
     font-family: 'Ubuntu', sans-serif;
 */
-header{
-    background: #99ccada3;   
-    width:100%;
-    position:sticky;
-    align-items: center;
-    display: flex;
-    top: 0; /* Posicionamos la cabecera pegada arriba */
-
+header {
+  background: rgba(153, 204, 173, 0.6392156863);
+  width: 100%;
+  position: sticky;
+  align-items: center;
+  display: flex;
+  top: 0; /* Posicionamos la cabecera pegada arriba */
 }
-
-
 
 .navegador div {
-    border:solid 1px #00ff0020;    /* dejo una línea poco visible como guía */
+  border: solid 1px rgba(0, 255, 0, 0.1254901961); /* dejo una línea poco visible como guía */
 }
-
-.sin-vinetas{  /* para las viñetas que no lleven viñeta */
-    list-style: none; 
+.navegador ul {
+  display: flex;
+  justify-content: center;
 }
-
-/* Navegador todos los tamaños */
-.navegador ul li a{
-    text-decoration: none; 
-    color: #404040f0;  
-    transform: scale(1.1,1.1);
-}
-
-
-.navegador ul{
-    display: flex;
-    justify-content: center;
-}
-
-
 .navegador ul li {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding-right: 1rem;
+  border-right: 2px solid purple;
+}
+.navegador ul li a {
+  text-decoration: none;
+  color: rgba(64, 64, 64, 0.9411764706);
+  transform: scale(1.1, 1.1);
+}
+.navegador ul li:last-child {
+  border-right: none;
+}
+
+.sin-vinetas { /* para las viñetas que no lleven viñeta */
+  list-style: none;
+}
+
+/* Fin de navegador todos los tamaños */
+/* Navegador: tamaño chico */
+@media screen and (max-width: 529px) {
+  .navegador {
+    padding: 0rem;
+    width: 100%;
+  }
+  .navegador ul {
+    display: grid;
+    justify-content: center;
+  }
+  .navegador ul li {
+    margin-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-right: 0px solid purple;
+  }
+  .navegador ul li a {
+    font-size: 80%;
+  }
+}
+/* Navegador: tamaño mediano */
+@media screen and (max-width: 767px) and (min-width: 530px) {
+  .navegador {
+    padding: 0rem;
+    width: 100%;
+  }
+  .navegador ul li {
+    font-family: "Ubuntu", sans-serif;
     margin-left: 1rem;
     padding-right: 1rem;
-    border-right: 2px solid purple;
-}
-
-
-.navegador ul li:last-child {
-    border-right: none;
-}
-/* Fin de navegador todos los tamaños */
-
-
-/* Navegador: tamaño chico */
-@media screen and (max-width:529px){
-    .navegador{
-        padding: 0rem; 
-        width:100%;
-    }
-    .navegador ul{
-        display: grid;
-        justify-content: center;
-    }
-    
-    .navegador ul li {
-        margin-left: 0.5rem;
-        padding-right: 0.5rem;
-        border-right: 0px solid purple;
-
-    }
-    .navegador ul li a{
-        font-size: 80%; 
-    
-    }
-    
-}/* fin navegador mediano */
-
-
-/* Navegador: tamaño mediano */
-@media screen and (max-width:767px) and (min-width:530px){
-    .navegador{
-        padding: 0rem; 
-        width:100%;
-    }
-
-    .navegador ul li {
-        font-family: 'Ubuntu', sans-serif;
-        margin-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .navegador ul li a {
-        font-size: 80%; 
-    }
-    
-}/* fin navegador mediano */
-
-
-
-
-/* Navegador grande */ 
+  }
+  .navegador ul li a {
+    font-size: 80%;
+  }
+} /* fin navegador mediano */
+/* Navegador grande */
 @media screen and (min-width: 768px) {
-
-    .navegador{
-        display:grid;
-        grid-template-columns: 1fr  ;  /* en tamaño grande, dos columnas */
-        grid-template-rows: 1fr ;
-        margin: 1rem;
-        justify-items: center ;  /* mueve en horizontal*/
-        align-items: center;   /* mueve en vertical */
-        width: 100%;
-       /* background-color: red;*/ 
-
-    }
-    .navegador ul li a {
-        /* color:yellow;*/
-        font-size: 100%;   /* en tamaño grande, fuente al 100%*/
-    }
+  .navegador {
+    display: grid;
+    grid-template-columns: 1fr; /* en tamaño grande, dos columnas */
+    grid-template-rows: 1fr;
+    margin: 1rem;
+    justify-items: center; /* mueve en horizontal*/
+    align-items: center; /* mueve en vertical */
+    width: 100%;
+  }
+  .navegador ul li a {
+    /* color:yellow;*/
+    font-size: 100%; /* en tamaño grande, fuente al 100%*/
+  }
 } /* fin navegador grande */
-
-
 .landing {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    background-color: rgba(205, 205, 205, 0.842);
-    border-color: darkgreen;
-    border-style: groove;
-    margin-top:10px;
-    margin-left:80px;
-    margin-right:80px;
-    padding:50px;
-    padding-top:0px;
-    text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background-color: rgba(205, 205, 205, 0.842);
+  border-color: darkgreen;
+  border-style: groove;
+  margin-top: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 50px;
+  padding-top: 0px;
+  text-align: center;
 }
-
 
 .pie {
-    background: #80008080;
-    width: 100%;
-    padding: 0.5rem;
-    bottom: 0;
-    position:fixed;
+  background: rgba(128, 0, 128, 0.5019607843);
+  width: 100%;
+  padding: 0.5rem;
+  bottom: 0;
+  position: fixed;
 }
 
 .texto-pie {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    color: #c0c0e0;
-    font-size:2 rem;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: #c0c0e0;
+  font-size: 2 rem;
 }
+
 .texto-copete {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    color: #c0c0e0;
-    font-size:2 rem;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: #c0c0e0;
+  font-size: 2 rem;
 }
+
 /* Nottas default*/
 .notas {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background-color: rgba(205, 205, 205, 0.842);
+  border-color: darkgreen;
+  border-style: groove;
+  margin-top: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 50px;
+  padding-top: 0px;
+  text-align: center;
+}
+.notas p {
+  padding: 0px;
+}
+.notas ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+.notas ul li a {
+  text-decoration: none;
+  color: rgba(64, 64, 64, 0.9411764706);
+  padding-right: 1rem;
+}
+
+/* Fin notas default y chico*/
+/* Notas mediano */
+@media screen and (mAX-width: 767px) {
+  .notas {
+    font-size: large;
+    max-width: 100%;
+    background-color: rgba(205, 205, 205, 0.842);
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    padding-top: 0px;
+  }
+  .notas ul {
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .notas ul li a {
+    padding-right: 1rem;
+  }
+  .notas div h1 {
+    font-size: medium;
+  }
+}
+/* Fin notas mediano */
+/* Notas grande */
+@media screen and (min-width: 768px) {
+  .notas {
+    font-size: large;
+    max-width: 100%;
+    background-color: rgba(205, 205, 205, 0.842);
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 50px;
+    padding-top: 0px;
+  }
+  .notas ul {
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .notas ul li a {
+    padding-right: 1rem;
+  }
+}
+/* Fin notas grande */
+.landing {
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background-color: rgba(205, 205, 205, 0.842);
+  /* border-color: darkgreen; */
+  /* border-style: groove; */
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 80%;
+}
+
+.titulo {
+  font-size: large;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.galeria-landing {
+  display: flex;
+  justify-content: center;
+  padding: 0rem;
+  width: 100%;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+}
+.galeria-landing img {
+  max-width: 100%; /* evita el scroll vertical de la galería en el index*/
+}
+
+.galeria-favoritos {
+  width: 100%;
+  margin: 100px;
+}
+.galeria-favoritos ul {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/* Contactos chico*/
+@media screen and (max-width: 767px) {
+  .contacto {
+    font-family: "Ubuntu", sans-serif;
+    font-size: medium;
+    display: flex;
+    max-width: 100%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  .galeria-contactos {
+    display: flex;
+    flex-flow: wrap; /* para que no queden todos en fila*/
+    justify-content: center;
+    width: 100%;
+  }
+  .galeria-contactos img {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+/* Contacto grande*/
+@media screen and (min-width: 768px) {
+  .contacto {
+    font-family: "Ubuntu", sans-serif;
+    font-size: medium;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    background-color: rgba(205, 205, 205, 0.842);
+    border-color: darkgreen;
+    border-style: groove;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  .galeria-contactos {
+    display: flex;
+    flex-flow: wrap; /* para que no queden todos en fila*/
+    justify-content: center;
+    width: 80%;
+    margin: 50px;
+  }
+  .galeria-contactos img {
+    margin: 10px;
+    size-adjust: auto;
+  }
+}
+.formulario-generador {
+  display: flex;
+  flex-flow: nowrap; /* para que no queden todos en fila*/
+  justify-content: center;
+  width: 100%;
+  margin: 50px;
+}
+
+/* Generador mediano y chico */
+@media screen and (max-width: 767px) {
+  .generador {
+    font-family: "Ubuntu", sans-serif;
     font-size: large;
     display: flex;
     justify-content: center;
@@ -205,303 +352,68 @@ header{
     background-color: rgba(205, 205, 205, 0.842);
     border-color: darkgreen;
     border-style: groove;
-    margin-top:10px;
-    margin-left:80px;
-    margin-right:80px;
-    padding:50px;
-    padding-top:0px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    padding-top: 5px;
     text-align: center;
+  }
 }
-
-.notas p{
-    padding:0px;
-}
-
-.notas ul {
-    list-style: none; 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-between;
-    margin:20px;
-}
-
-.notas ul li a{
-    text-decoration: none;  
-    color: #404040f0;  
-    padding-right: 1rem;
-
-}
-
-
-/* Fin notas default y chico*/
-/* Notas mediano */ 
-@media screen and (mAX-width:767px){
-    .notas {
-        font-size: large;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        margin-top:10px;
-        margin-left:5px;
-        margin-right:5px;
-        padding:5px;
-        padding-top:0px;
-    }
-
-    .notas ul {
-        justify-content:space-between;
-        margin:20px;
-    }
-
-    .notas ul li a{
-        padding-right: 1rem;
-    }
-    .notas div h1{
-        font-size:medium;
-    }
-}
-/* Fin notas mediano */
-
-/* Notas grande */ 
-@media screen and (min-width:768px){
-    .notas {
-        font-size: large;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        margin-top:20px;
-        margin-left:80px;
-        margin-right:80px;
-        padding:50px;
-        padding-top:0px;
-    }
-
-    .notas ul {
-        justify-content:space-between;
-        margin:20px;
-    }
-
-    .notas ul li a{
-        padding-right: 1rem;
-    }
-}
-/* Fin notas grande */
-
-.landing {
-    font-family: 'Ubuntu', sans-serif;
+/* Generador grande */
+@media screen and (min-width: 768px) {
+  .generador {
+    font-family: "Ubuntu", sans-serif;
     font-size: large;
     display: flex;
     justify-content: center;
     max-width: 100%;
     background-color: rgba(205, 205, 205, 0.842);
-    /* border-color: darkgreen; */
-   /* border-style: groove; */
-    margin-top:5px;
-    margin-left:10px;
-    margin-right:10px;
-    padding:10px;
-    padding-top:0px;
+    border-color: darkgreen;
+    border-style: groove;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 50px;
+    padding-top: 50px;
     text-align: center;
-    font-size: 80%;
+  }
 }
-
-.titulo{
-    font-size: large;
-    padding:1rem;
-    max-width: 100%;
-}
-
-.galeria-landing {
-    display:flex;
-    justify-content: center;
-    padding: 0rem; 
-    width:100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    margin-top:1rem;
-}
-
-.galeria-landing img{
-    max-width: 100%;  /* evita el scroll vertical de la galería en el index*/
-}
-
-.galeria-favoritos {
-
-    width:100%;
-    margin:100px;
-   
-}
-
-.galeria-favoritos ul{
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    list-style: none; 
-}
-
-
-
-/* Contactos chico*/
-@media screen and (max-width:767px){
-    .contacto{
-
-        font-family: 'Ubuntu', sans-serif;
-        font-size: medium;
-        display: flex;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        border-color: darkgreen;
-        border-style: groove;
-        margin:5px;
-        padding:5px;
-        text-align: center;
-        }
-
-
-        .galeria-contactos {
-            display:flex;
-            flex-flow: wrap; /* para que no queden todos en fila*/
-            justify-content: center;
-            width:100%;
-
-        }
-    
-        .galeria-contactos img{
-            max-width: 100%;
-            padding: 10px;
-    
-        }        
- }
-    
-    
-
-
-
-/* Contacto grande*/
- @media screen and (min-width:768px){
-
-    .contacto{
-
-        font-family: 'Ubuntu', sans-serif;
-        font-size: medium;
-        align-items: center;
-        
-        display: flex;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        border-color: darkgreen;
-        border-style: groove;
-        margin:5px;
-        padding:5px;
-        text-align: center;
-    }
-
-
-    .galeria-contactos {
-        display:flex;
-        flex-flow: wrap; /* para que no queden todos en fila*/
-        justify-content: center;
-        width:80%;
-        margin:50px;
-    }
-
-    .galeria-contactos img{
-        margin:10px;
-        size-adjust: auto;
-
-    }
-}
-
-
-
-
-.formulario-generador {
-    display:flex;
-    flex-flow: nowrap; /* para que no queden todos en fila*/
-    justify-content: center;
-    width:100%;
-    margin:50px;
-}
-/* Generador mediano y chico */
-@media screen and (max-width:767px){
-        
-    .generador {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: large;
-        display: flex;
-        justify-content: center;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        border-color: darkgreen;
-        border-style: groove;
-        margin-top:10px;
-        margin-left:5px;
-        margin-right:5px;
-        padding:5px;
-        padding-top:5px;
-        text-align: center;
-    }
-}
-
-/* Generador grande */
-@media screen and (min-width:768px){
-        
-    .generador {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: large;
-        display: flex;
-        justify-content: center;
-        max-width: 100%;
-        background-color: rgba(205, 205, 205, 0.842);
-        border-color: darkgreen;
-        border-style: groove;
-        margin-top:10px;
-        margin-left:80px;
-        margin-right:80px;
-        padding:50px;
-        padding-top:50px;
-        text-align: center;
-    }
-}
-
 /* grids por áreas*/
-#grilla{
-    display:grid;
-    border: solid 1px green;
-    grid-template-areas: 
-    "contenido contenido publicidad"
-    "contenido contenido publicidad"
-    "contenido contenido publicidad";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30% 30%;
+#grilla {
+  display: grid;
+  border: solid 1px green;
+  grid-template-areas: "contenido contenido publicidad" "contenido contenido publicidad" "contenido contenido publicidad";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30% 30%;
 }
 
-
-.img {  /* las imágenes nunca se pasan del 100%*/
-    max-width: 100%;   
+.img { /* las imágenes nunca se pasan del 100%*/
+  max-width: 100%;
 }
 
-.grid div img{ /* las imágenes de la grilla van al 90%*/
-    max-width:90%;
+.grid div img { /* las imágenes de la grilla van al 90%*/
+  max-width: 90%;
 }
 
-
-
-@media screen and (min-width:768px){
-    .grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr ;  /* en tamaño grande, dos columnas */
-        grid-template-rows: 1fr ;
-        margin: 1rem;
-        justify-items: center ;  /* mueve en horizontal*/
-        align-items: center;   /* mueve en vertical */
-        width: 95%;
-
-    }
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* en tamaño grande, dos columnas */
+    grid-template-rows: 1fr;
+    margin: 1rem;
+    justify-items: center; /* mueve en horizontal*/
+    align-items: center; /* mueve en vertical */
+    width: 95%;
+  }
 }
-
 #boton-header:hover {
-    color: #a0a0a0; 
-    font-style: italic;
+  color: #a0a0a0;
+  font-style: italic;
 }
+
 #imagen-zoom:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
+
+/*# sourceMappingURL=styles.css.map */
