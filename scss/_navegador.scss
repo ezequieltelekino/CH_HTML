@@ -7,8 +7,8 @@
         display: flex;
         justify-content: center;
         li {
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 1rem;
+            font-family: $fuente;
+            font-size: 1.5rem;
             margin-left: 1rem;
             padding-right: 1rem;
             border-right: 2px solid purple;
@@ -55,7 +55,7 @@
         padding: 0rem; 
         width:100%;
         ul li {
-            font-family: 'Ubuntu', sans-serif;
+            font-family: $fuente;
             margin-left: 1rem;
             padding-right: 1rem;
             a {

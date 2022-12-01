@@ -3,6 +3,7 @@ $pantalla_mediana: 768px;
 $fondo_header: #99ccada3;
 $header_hover:  #a0a0a0; 
 $color_fondo_cajas: rgba(205, 205, 205, 0.842);
+$fuente:  'Ubuntu', sans-serif;
 
 $carousel-control-transition:        opacity .915s ease;
 
@@ -36,13 +37,13 @@ header{
 }
 
 .texto-pie {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;
     text-align: center;
     color: #c0c0e0;
     font-size:2 rem;
 }
 .texto-copete {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;
     text-align: center;
     color: #c0c0e0;
     font-size:2 rem;
@@ -74,7 +75,7 @@ html{
 }
 
 .caja_gris{ 
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;
     display: flex;
     background-color: $color_fondo_cajas;
     border-style: groove; 

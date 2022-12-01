@@ -29,7 +29,7 @@
 /* Generador grande */
 @media screen and (min-width:768px){
     .generador {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: $fuente;
         font-size: large;
         display: flex;
         justify-content: center;

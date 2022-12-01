@@ -11,7 +11,7 @@
     /* el siguiente código me gustaría meterlo en un extend, 
     pero no medeja hacerlo en una MQ*/
 
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;
     display: flex;
     background-color: $color_fondo_cajas;
     border-style: groove; 
