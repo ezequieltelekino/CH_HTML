@@ -11,7 +11,7 @@
 }
 
 header {
-  background: rgba(153, 204, 173, 0.6392156863);
+  background: rgba(153, 204, 173, 0.8156862745);
   width: 100%;
   position: sticky;
   align-items: center;
@@ -102,21 +102,18 @@ html {
     width: 95%;
   }
 }
-.navegador div {
-  border: solid 1px rgba(0, 255, 0, 0.1254901961); /* dejo una línea poco visible como guía */
-}
 .navegador ul {
   display: flex;
   justify-content: center;
 }
 .navegador ul li {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-left: 1rem;
   padding-right: 1rem;
   border-right: 2px solid purple;
 }
 .navegador ul li a {
+  font-family: "Ubuntu", sans-serif;
   text-decoration: none;
   color: rgba(64, 64, 64, 0.9411764706);
   transform: scale(1.1, 1.1);
@@ -126,40 +123,6 @@ html {
 }
 
 /* Fin de navegador todos los tamaños */
-/* Navegador: tamaño chico */
-@media screen and (max-width: 529px) {
-  .navegador {
-    padding: 0rem;
-    width: 100%;
-  }
-  .navegador ul {
-    display: grid;
-    justify-content: center;
-  }
-  .navegador ul li {
-    margin-left: 0.5rem;
-    padding-right: 0.5rem;
-    border-right: 0px solid purple;
-  }
-  .navegador ul li a {
-    font-size: 80%;
-  }
-}
-/* Navegador: tamaño mediano */
-@media screen and (max-width: 767px) and (min-width: 530px) {
-  .navegador {
-    padding: 0rem;
-    width: 100%;
-  }
-  .navegador ul li {
-    font-family: "Ubuntu", sans-serif;
-    margin-left: 1rem;
-    padding-right: 1rem;
-  }
-  .navegador ul li a {
-    font-size: 80%;
-  }
-} /* fin navegador mediano */
 /* Navegador grande */
 @media screen and (min-width: 768px) {
   .navegador {
@@ -170,11 +133,67 @@ html {
     justify-items: center; /* mueve en horizontal*/
     align-items: center; /* mueve en vertical */
     width: 100%;
-  }
-  .navegador ul li a {
-    font-size: 100%; /* en tamaño grande, fuente al 100%*/
+    border-right: 0px solid blue;
   }
 } /* fin navegador grande */
+/* Navegador: tamaño mediano */
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .navegador {
+    padding: 0rem;
+    width: 100%;
+  }
+  .navegador ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .navegador ul li {
+    font-family: "Ubuntu", sans-serif;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    border: 0px solid yellow;
+  }
+} /* fin navegador mediano */
+/* Navegador: tamaño chico */
+@media screen and (max-width: 399px) {
+  .navegador {
+    padding: 0rem;
+    width: 100%;
+  }
+  .navegador ul {
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 1fr; /* en tamaño grande, dos columnas */
+  }
+  .navegador ul li {
+    margin-left: 0px;
+    padding-right: 0px;
+    border-right: 0px solid purple;
+  }
+  .navegador ul li a {
+    font-size: 100%;
+  }
+}
+/* Navegador: tamaño chico */
+@media screen and (max-width: 280px) {
+  .navegador {
+    padding: 0rem;
+    width: 100%;
+  }
+  .navegador ul {
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 1fr; /* en tamaño grande, dos columnas */
+  }
+  .navegador ul li {
+    margin-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-right: 0px solid purple;
+  }
+  .navegador ul li a {
+    font-size: 70%;
+  }
+}
 /* Notas default*/
 .notas {
   font-size: large;
