@@ -18,6 +18,9 @@ header {
   display: flex;
   top: 0; /* Posicionamos la cabecera pegada arriba */
 }
+header a {
+  line-height: 0;
+}
 
 .pie {
   background: rgba(128, 0, 128, 0.5019607843);
